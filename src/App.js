@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import {gsap,Power3} from 'gsap'
 
 function App() {
   const [toggle ,settoggle]=React.useState(true)
@@ -70,6 +71,7 @@ function App() {
     
   }
   
+ 
 
   return (
     <div className="App">
@@ -80,9 +82,9 @@ function App() {
           <span style={{cursor:"pointer"}} onClick={cleanall}>Clin</span>
         </div>
         <div className='firstQuestion'>
-           <div className='title' onClick={()=>settoggle(!toggle)}><h6>First Question</h6></div>
+           <div className='title' onClick={()=>{settoggle(!toggle)}}><h6>First Question</h6></div>
            {toggle &&
-           <div className='toggle'>
+           <div className='toggle' >
               <p>first answer</p>
               <div className='btns'>
                 <button onClick={handleclick1} >key_01</button>
